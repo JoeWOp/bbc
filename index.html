@@ -6,7 +6,7 @@
     <title>Discord Webhook sender</title>
   </head>
   <body>
-    <button onclick="sendMessage1()">Send automated something message or press y</button>
+    <button onclick="sendMessage1()">Send automated something message</button>
         <button onclick="sendMessage2()">send "maybe?"</button>
       <button onclick="sendMessage3()">Send @everyone</button>
   </body>
@@ -56,11 +56,5 @@
 
       request.send(JSON.stringify(params3));
     }
-    
-    document.addEventListener('keydown', (e)=>{
-      if(e.keyCode == 89){
-        sendMessage1();
-      request.send(JSON.stringify(params));
-      }
   </script>
 </html>
