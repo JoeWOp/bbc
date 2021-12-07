@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Webhook sender</title>
+  </head>
+  <body>
+    <button onclick="sendMessage1()">Send automated something message</button>
+        <button onclick="sendMessage2()">send "maybe?"</button>
+      <button onclick="sendMessage3()">Send @everyone</button>
+  </body>
+
+  <script>
+    function sendMessage1() {
+      const request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/917619213223481424/kdal6PzSAz0MdpTUmOHzx2KPfXSzHFwQeC3WL0Ddzcb4SsRausgC3RyDmxaW7ynpL1no");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      const params = {
+        username: "webhook sender",
+        avatar_url: "",
+        content: " this message is automated ;-; "
+      }
+
+      request.send(JSON.stringify(params));
+    }
+      
+      function sendMessage2() {
+      const request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/917619213223481424/kdal6PzSAz0MdpTUmOHzx2KPfXSzHFwQeC3WL0Ddzcb4SsRausgC3RyDmxaW7ynpL1no");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      const params2 = {
+        username: "webhook sender",
+        avatar_url: "",
+        content: " maybe? "
+      }
+
+      request.send(JSON.stringify(params2));
+    }
+      
+      function sendMessage3() {
+      const request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/917619213223481424/kdal6PzSAz0MdpTUmOHzx2KPfXSzHFwQeC3WL0Ddzcb4SsRausgC3RyDmxaW7ynpL1no");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      const params3 = {
+        username: "@everyone Sender",
+        avatar_url: "https://i.imgur.com/bzLFu5g_d.webp?maxwidth=128&shape=thumb",
+        content: " @everyone "
+      }
+
+      request.send(JSON.stringify(params3));
+    }
+  </script>
+</html>
